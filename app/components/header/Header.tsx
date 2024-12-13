@@ -15,12 +15,18 @@ export function Header() {
         'border-bolt-elements-borderColor': chat.started,
       })}
     >
-      <div className="flex items-center gap-2 z-logo text-bolt-elements-textPrimary cursor-pointer">
-        <div className="i-ph:sidebar-simple-duotone text-xl" />
-        <a href="/" className="text-2xl font-semibold text-accent flex items-center">
-          {/* <span className="i-bolt:logo-text?mask w-[46px] inline-block" /> */}
-          <img src="/logo-light-styled.png" alt="logo" className="w-[90px] inline-block dark:hidden" />
-          <img src="/logo-dark-styled.png" alt="logo" className="w-[90px] inline-block hidden dark:block" />
+      <div className="flex items-center gap-2 z-logo">
+        <button
+          aria-label="Toggle Sidebar"
+          className="i-ph:sidebar-simple-duotone text-xl text-bolt-elements-textPrimary"
+        />
+        <a
+          href="/"
+          className="flex items-center gap-2 text-accent hover:opacity-90 transition-opacity"
+          aria-label="Hilbert AI Home"
+        >
+          <h1 className="text-2xl font-semibold">Hilbert AI</h1>
+          <img src="/hilbert.png" alt="Hilbert AI Logo" className="w-10 h-10 dark:invert" />
         </a>
       </div>
       {chat.started && ( // Display ChatDescription and HeaderActionButtons only when the chat has started.
